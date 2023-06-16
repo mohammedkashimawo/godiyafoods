@@ -1,0 +1,787 @@
+
+<!DOCTYPE html>
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+
+<style type="text/css">#fade-in {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  #fade-in .show {
+    opacity: 1;
+  }
+
+  @media(max-width:768px){
+
+    #kilolo{background-image:none}
+    .card:hover{cursor:pointer}
+  }
+ 
+ 
+  @media(min-width:768px){
+body{background-image: url('cv.jpg');}
+    #kilolo{background-image:url('cv.jpg');
+    background-size:auto;background-repeat: no-repeat;
+}
+.card:hover{cursor:pointer}
+  }
+  
+  
+  
+  </style>
+
+    
+<!--    <script src="https://cdn.tailwindcss.com"></script>
+-->
+    <link rel="stylesheet" href="output.css">
+  <!--  <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+   
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    -->
+</head>
+
+<body class="text-3xl font-serif" onload="three()">
+    <div  class="grid sm:grid-cols-3 ">
+<!-- content wrapper is to be placed here-->
+
+<div class="sm:col-span-1" id="kilolo">
+    <nav class="text-right mr-20">
+        <div class="flex justify-between items-center        "> 
+            <h1 class="font-bold uppercase border-b border-gray-200 mb-5 mt-8
+        "><a href="/" class=" text-sm sm:text-red-500 md:text-xl lg:text-white hover:text-gray-700">Godiya</a></h1>
+<div class=" px-4 cursor-pointer sm:hidden" id="burger">
+
+
+    <svg class="w-6"xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+     stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+      </svg>
+      
+
+
+
+</div>
+        </div>
+        <ul class="hidden sm:block text-sm mt-6  h-56" id="menu">
+            <li class="py-2 border-r-4 hover:border-red-700" >
+                 <a href="#" class="px-4 flex justify-end">
+                    <span class="text-white font-bold"> HOME</span><svg class="inline-block w-5 ml-4 text-white" xmlns="http://www.w3.org/2000/svg" 
+                     fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                         d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
+                      </svg>
+                      </a></li>
+                    <li class="py-2 border-r-4 hover:border-red-700">
+                        <a href="#" class="px-4 flex justify-end">
+                           <span class="text-white">About</span><svg class="w-5 inline-block ml-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" 
+                           viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                          </svg>
+                          
+                        </a></li>
+                           <li class="py-2 border-r-4 hover:border-red-700">
+                            <a href="#" class="px-4 flex justify-end">
+                               <span class="text-white">Contact</span><svg class="w-5 inline-block ml-4 text-white"xmlns="http://www.w3.org/2000/svg" 
+                               fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                 d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25
+                                  0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                              </svg>
+                              </a></li></ul>
+
+    </nav>
+
+
+
+    <div class=" hidden sm:block  bg-opacity-5 border-b-white w-full h-1/2 " 
+     style="height:600px;">
+
+     <p id="amdr"class=" w-4/6 border  h-9   py-2 border-white-100 border-solid bg-red-50 font-mono text-sm ml-10 mt-10 
+     rounded-md text-center" style="background-color:rgba(255,255,255,0.2);backdrop-filter: blur(15px);color:white
+     ">the food you ordered</p>
+     <p id="amd" class=" w-4/6 border  h-5/6
+        py-2 border-white-100 border-solid bg-red-200 font-mono text-sm ml-10
+      mt-10 rounded-md text-center" style="background-color:rgba(255,255,255,0.2);backdrop-filter: blur(15px);color:white;
+      ">
+        
+    
+    
+    <button id="system" class="border border-red-800 mt-4" ><i id="mark">Proceed To Order</i></button>
+    </p>
+    </div>
+</div>
+
+
+<main class="px-16 py-6 bg-gray-100 sm:col-span-2">
+
+<div class="flex justify-end top-10  sm:justify-end">
+
+<a href="#" class=" btn   rounded-full border-2 text-pink-700 text-center  font-mono  text-xs 
+w-24  shadow-lg hover:bg-gray-300 hover:text-white hover:font-mono " >log in </a>
+<a href="#" class="btn   rounded-full border-2 text-pink-700 text-center  font-mono  text-xs 
+w-24  shadow-lg hover:bg-gray-300 hover:text-white hover:font-mono"> sign in</a>
+
+</div>
+
+
+<header>
+    <h2 class="text-slate-700 text-4xl sm:text-6xl  font-nunito font-extrabold ">Our Daily Menu</h2>
+    <h3 class="text-gray-700 text-2xl"  >of Delicacies</h3>
+</header>
+
+
+
+
+    <h4 class="font-bold mt-12 pb-2 border-b border-gray-300">Fresh and Hot!!</h4>
+
+    <div id="ADD" class="sm:grid grid-cols-3 gap-10">
+
+    <div class="card opacity-0"  id="fade-in">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="a.jpg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Yellow Semo with gbegiri</span>
+            <span class="block text-gray-500 text-sm">Cooked by Siasimi and team</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358; 1200</span>
+        </div>
+    </div>
+    <div class="card  opacity-0"  id="fade-in1">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="a.jpg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">beans and bread</span>
+            <span class="block text-gray-500 text-sm">Cooked by Tasha and sisyu</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358;1200</span>
+        </div>
+    </div>
+
+    <div class="card opacity-0"  id="fade-in2">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="f.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Fried rice samosa</span>
+            <span class="block text-gray-500 text-sm">Cooked by Siasimi</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span> <span class="ml-9">&#8358; 1200</span>
+        </div>
+    </div>
+    
+    <div class="card  opacity-0"  id="fade-in3">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="g.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">HONEY TEA AND BUNS</span>
+            <span class="block text-gray-500 text-sm">jamila</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358; 1200</span>
+        </div>
+    </div>
+
+
+    
+    <div class="card  opacity-0"  id="fade-in4">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="h.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Bala tutilas</span>
+            <span class="block text-gray-500 text-sm">Cooked by Siasimi and team</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358;1200</span>
+        </div>
+    </div>
+
+    
+    <div class="card  opacity-0"  id="fade-in5">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="i.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">lilon firi</span>
+            <span class="block text-gray-500 text-sm">Cooked by ladipoe</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span >25 mins</span><span class="ml-9">&#8358;1200</span>
+        </div>
+    </div>
+
+    
+    <div class="card  opacity-0"  id="fade-in6" >
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="j.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Jasmina</span>
+            <span class="block text-gray-500 text-sm">Cooked by Siasimi and tolu</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358; 1200</span>
+        </div>
+    </div>
+    
+    <div class="card  opacity-0"  id="fade-in7">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="j.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Fufu </span>
+            <span class="block text-gray-500 text-sm">Cooked by Siasimi and team</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="w-5 inline-block " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358;1200</span>
+        </div>
+    </div>
+    
+    <div class="card  opacity-0"  id="fade-in8">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="k.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Bulli </span>
+            <span class="block text-gray-500 text-sm">shady</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358; 1200</span>
+        </div>
+    </div>
+    
+    <div class="card  opacity-0"  id="fade-in9">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="l.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Yellow Semo </span>
+            <span class="block text-gray-500 text-sm">Cooked by hot</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358;1200</span>
+        </div>
+    </div>
+
+    
+    <div class="card  opacity-0"  id="fade-in10">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="m.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Semo and ewete</span>
+            <span class="block text-gray-500 text-sm">Cooked by Siasimi and team</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="inline-block w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" 
+            stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358;1200</span>
+        </div>
+    </div>
+
+
+    
+    <div class="card  opacity-0"  id="fade-in11" >
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="n.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Eba</span>
+            <span class="block text-gray-500 text-sm">Cooked by Siasimi and team</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358;1200</span>
+        </div>
+    </div>
+
+
+    
+    <div class="card  opacity-0"  id="fade-in12">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="o.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Badda</span>
+            <span class="block text-gray-500 text-sm">Cooked full</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358;1200</span>
+        </div>
+    </div>
+    <div class="card  opacity-0"  id="fade-in13">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="p.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">custard </span>
+            <span class="block text-gray-500 text-sm">Cooked tolulope</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358; 1200</span>
+        </div>
+    </div>
+
+    <div class="card  opacity-0"  id="fade-in14">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="q.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Yellow pasma</span>
+            <span class="block text-gray-500 text-sm">Cooked by tapsa</span>
+           
+        </div>
+        <div class="badge">
+            <svg class="inline-block w-5"xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              
+            <span  >25 mins</span><span class="ml-9">&#8358; 1200</span>
+        </div>
+    </div>
+
+</div>
+
+
+<h4 class="font-bold mt-12 pb-2">Most
+    
+    Ordered Food</h4>
+
+
+
+
+
+
+<div class="mt-8  shadow-lg hover:shadow-xl; grid sm:grid-cols-3 gap-10"><!--card goes here-->
+
+
+    <div class="card"  id="fade-in15">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="r.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Yellow Semo with gbegiri</span>
+            <span class="block text-gray-500 text-sm">Cooked by Siasimi and team</span>
+           
+        </div>
+        <div class="badge">
+
+            <span  >25 mins</span>
+        </div>
+    </div>
+
+    <div class="card"  id="fade-in16">
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="s.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Yellow Semo with gbegiri</span>
+            <span class="block text-gray-500 text-sm">Cooked by Siasimi and team</span>
+           
+        </div>
+        <div class="badge">
+
+            <span  >25 mins</span>
+        </div>
+    </div>
+
+    <div class="card" id="fade-in17" >
+        <!--product cards will be placed here -->
+
+        <img class=" w-full h-32 sm:h-32 object-cover" src="t.jpeg" alt=""/>
+        <div  class="m-4">
+            <span class="font-bold sm:text-sm">Yellow Semo with gbegiri</span>
+            <span class="block text-gray-500 text-sm">Cooked by Siasimi and team</span>
+           
+        </div>
+        <div class="badge">
+
+            <span  >25 mins</span>
+        </div>
+    </div></div>
+
+
+<div class="w-1/3 h-44 absolute left-2/4 top-auto mt-10 text-align:center;">
+
+    <div class="btn  w-full  h-1/4t text-center  sm: mx-36 text-blue-950 text-lg
+     font-mono border-2 border-red-900  hover:shadow-lg">Load More</div>
+</div>
+
+</main>
+
+
+
+    </div>
+
+    <script type="text/javascript">
+
+
+
+ function three() {
+  var bod = document.getElementById("fade-in");
+  var bod1 = document.getElementById("fade-in1");
+  var bod2 = document.getElementById("fade-in2");
+  var bod3 = document.getElementById("fade-in3");
+  var bod4 = document.getElementById("fade-in4");
+  var bod5 = document.getElementById("fade-in5");
+  var bod6 = document.getElementById("fade-in6");
+  var bod7 = document.getElementById("fade-in7");
+  var bod8 = document.getElementById("fade-in8");
+  var bod9 = document.getElementById("fade-in9");
+  var bod10 = document.getElementById("fade-in10");
+  var bod11 = document.getElementById("fade-in11");
+  var bod12 = document.getElementById("fade-in12");
+  var bod13 = document.getElementById("fade-in13");
+  var bod14 = document.getElementById("fade-in14");
+ 
+
+
+
+
+  function started() {
+
+    bod.style.opacity = '1';
+    
+    bod.style.transition = 'all 3s ease';
+  }
+
+  
+  function started1() {
+
+bod1.style.opacity = '1';
+bod1.style.transition = 'all 3s ease';
+}
+
+function started2() {
+
+bod2.style.opacity = '1';
+bod2.style.transition = 'all 3s ease';
+}
+
+
+function started3() {
+
+bod3.style.opacity = '1';
+bod3.style.transition = 'all 3s ease';
+}
+
+
+function started4() {
+
+bod4.style.opacity = '1';
+bod4.style.transition = 'all 3s ease';
+}
+
+
+function started5() {
+
+bod5.style.opacity = '1';
+bod5.style.transition = 'all 3s ease';
+}
+
+
+
+
+function started6() {
+
+bod6.style.opacity = '1';
+bod6.style.transition = 'all 3s ease';
+}
+
+
+function started7() {
+
+bod7.style.opacity = '1';
+bod7.style.transition = 'all 3s ease';
+}
+
+function started8() {
+
+bod8.style.opacity = '1';
+bod8.style.transition = 'all 3s ease';
+}
+
+
+function started9() {
+
+bod9.style.opacity = '1';
+bod9.style.transition = 'all 3s ease';
+}
+
+function started10() {
+
+bod10.style.opacity = '1';
+bod10.style.transition = 'all 3s ease';
+}
+
+
+function started11() {
+
+bod11.style.opacity = '1';
+bod11.style.transition = 'all 3s ease';
+}
+
+
+function started12() {
+
+bod12.style.opacity = '1';
+bod12.style.transition = 'all 3s ease';
+}
+
+
+function started13() {
+
+bod13.style.opacity = '1';
+bod13.style.transition = 'all 3s ease';
+}
+
+
+function started14() {
+
+bod14.style.opacity = '1';
+bod14.style.transition = 'all 1s ease';
+}
+
+
+
+
+
+// Show the element immediately
+
+  setTimeout(started, 1000);
+  
+  setTimeout(started1, 3000);  
+  setTimeout(started2, 4000);  
+  setTimeout(started3, 5000);
+  
+  setTimeout(started4, 6000);  
+  setTimeout(started5, 7000);  
+  setTimeout(started6, 8000); 
+  
+  setTimeout(started7, 9000);  
+  setTimeout(started8, 10000);  
+  setTimeout(started9, 11000);
+
+  
+  setTimeout(started10, 12000);  
+  setTimeout(started11, 13000);  
+  setTimeout(started12, 14000);
+
+
+  
+  setTimeout(started13, 15000);  
+  setTimeout(started14, 16000);  
+ // setTimeout(started9, 22000);
+
+};
+
+
+
+
+
+
+
+const burger = document.querySelector('#burger')
+const menu =document.querySelector('#menu')
+
+
+burger.addEventListener('click', ()=>{
+
+    if(menu.classList.contains('hidden'))
+
+    {
+        menu.classList.remove('hidden')
+    }else {
+        menu.classList.add('hidden')
+    }
+})
+
+
+
+function joe(){
+  let dogy= document.querySelectorAll('.card .m-4 ');
+  console.log(...dogy)
+  dogy.forEach(fun)
+function fun(dog){
+
+let amd=document.getElementById('amd')
+let count=0;
+  dog.addEventListener('click',funct)
+  
+  function funct(event){
+        const clickedChild = event.target;
+        count +=1;
+        console.log(count)
+  if (clickedChild.classList.contains('font-bold') && count === 1) {
+
+let amd=document.getElementById('amd')
+    let dal=clickedChild.innerText
+    console.log(dal);
+let op=document.createElement('p');
+let lama=document.createElement('div')
+let counter=document.createTextNode(count++)
+let os=document.createTextNode(dal);
+let odg=document.createElement('button');
+odg.textContent="delete"
+let mark=document.getElementById('mark')
+let system=document.getElementById('system')
+
+// Create the input element
+var inputElement = document.createElement("input");
+
+// Set the type attribute to "number"
+inputElement.setAttribute("type", "number");
+
+// Add any additional attributes or properties as needed
+inputElement.setAttribute("id", "myNumberInput");
+inputElement.setAttribute("name", "numberInput");
+inputElement.setAttribute("min", "0");
+inputElement.setAttribute("max", "100");
+inputElement.value = 1;
+
+// Append the input element to the desired parent element
+
+//parentElement.appendChild(inputElement);
+
+
+odg.style=`margin-left:10px;font-family:nunito;background-color:rgba(255,255,255,0.2);width:50px;
+height:25px;border-radius:5px;color:white;border-bottom:0px rgba(255,255,255,0.05) solid;margin-top:5px;`
+inputElement.style=`color:black;margin-left:10px;`
+op.appendChild(os);
+op.appendChild(inputElement)
+op.appendChild(odg)
+
+lama.appendChild(op);
+lama.style="width:100%;background-red;text-align:center;border:0px black solid"
+console.log(lama)
+amd.insertBefore(lama, system)
+console.log(os)
+console.log(amd.innerText);
+
+odg.addEventListener('click', functt)
+
+
+function functt(){
+    odg.parentNode.style.display="none";}
+    counter++
+
+  }
+
+
+
+
+else if(count >=2){
+    count++
+}}
+  }
+
+  
+  
+
+
+}
+joe()
+
+    </script>
+</body>
+</html>
